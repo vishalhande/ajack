@@ -32,5 +32,6 @@ class Content(models.Model):
     document = models.FileField(upload_to='pdf')
 
 class Categories(models.Model):
+    id = models.IntegerField('id',primary_key=True)
     conref = models.ForeignKey(Content ,on_delete=models.CASCADE,related_name='catref')
 
